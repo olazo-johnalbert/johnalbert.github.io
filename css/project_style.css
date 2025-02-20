@@ -12,11 +12,14 @@
 /* ==================== */
 /* Base Styles */
 /* ==================== */
+body {
+    overflow: hidden;
+}
 header {
-    padding: 0;
+    top: 27px;
 }
 .slide-container {
-    margin-top: -75px; 
+    margin-top: -20px;
     overflow-y: scroll;
     scrollbar-width: none;
     scroll-snap-type: y mandatory;

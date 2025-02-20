@@ -8,7 +8,7 @@
 
 .container {
     display: grid;
-    width: 90%;
+    width: 85%;
     /* grid-template-columns: 27% 27% 15% 27%; */
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
     grid-template-columns: 30% 26% 15% 30%; 
@@ -160,7 +160,7 @@
     }
 }
 .photo-container {
-    background-color: #ef2020;
+    /* background-color: #ef2020; */
     height: clamp(80%, 10vh, 100%);
     width: clamp(80%, 5vw, 100%);
     position: relative;
@@ -382,7 +382,7 @@ hr {
     height: 100%;
     width: 100%;
     padding: 0;
-    border: red 1px solid;
+    /* border: red 1px solid; */
 }
 @media only screen and (max-width: 720px){
     .projects-container {
