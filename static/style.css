@@ -1,3 +1,4 @@
+@import url('keyframes.css');
 :root {
     --background-color: #fff;
     --card-box-shadow: -5px -5px 10px rgba(255,255,255, 0.8),
@@ -9,37 +10,23 @@
 }
 
 html {
-    scroll-padding-top: 80px; /* Height of your fixed header */
+    scroll-padding-top:100px; /* Height of your fixed header */
 }
 
 body {
     font-family: "Space Grotesk", serif;
-    margin: 0;
+    /* margin: 0; */
     min-height: 100vh;
     /* padding: var(--padding-global); */
-    background-color: #e3e3e3;
     display: grid;
     place-items: center;
-    /* border: red 1px solid; */
     grid-template-columns: 1fr;
     grid-template-areas: 
     "header"
     "tile-container";
     overflow: hidden;
-}
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; /* Ensure full viewport height */
-    opacity: 0.1;
-    background-image: url("../img/bg.gif"); 
-    background-size: stretch;
-    background-position: center;
-    /* background-repeat: no-repeat; */
-    z-index: -1; 
+    background-color: #dfdfdf;
+    /* border: red 1px solid; */
 }
 
 hr {
@@ -55,9 +42,10 @@ hr {
 header {
     /* border: red 1px solid; */
     grid-area: header;
-    /* top: -50px; */
-    position: sticky;
-    width: 80%;
+    position: fixed;
+    top: 0px;
+    padding-top: 20px;
+    width: 90vw;
     /* padding: 0 clamp(1rem, 5vw, 5rem); */
     display: flex;
     justify-content: space-between;
@@ -65,7 +53,6 @@ header {
     gap: 25%;
     margin: 0;
     z-index: 111;
-    background-color: #d6d6d6ff;
 }
 
 header h4 {
@@ -79,7 +66,7 @@ header h4 {
     max-width: 600px;
     height: 50px;
     box-shadow: 2px 2px 5px rgba(255,255,255, 0.8),
-    -2px -2px 5px rgba(70, 70, 70, 0.32);
+    -2px -2px 5px rgba(27, 27, 27, 0.32);
     background: transparent;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -114,7 +101,7 @@ header h4 {
     position: absolute;
     bottom: 10%;
     height: 80%;    
-    background: #231312;
+    background: #030303;
     box-shadow: -3px -3px 3px rgba(255,255,255, 0.8),   
     3px 3px 3px rgba(0, 0, 0, 0.4);;
     border-radius: 10px;
@@ -206,13 +193,12 @@ header h4 {
 
 .tile-container {
     grid-area: tile-container;
-    /* border: red 1px solid; */
-    transform: translateY(-10%);
+    transform: translateY(0px);
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90%;
-    height: 80%;
+    height: 85vh;
     margin: 0;
     padding: 0;
     z-index: 0;
@@ -235,80 +221,9 @@ header h4 {
     animation-duration: 0.3s;
     animation-timing-function: ease;
     animation-fill-mode: backwards;
+    margin: 0;
+    overflow: hidden;
 }
 
 
 
-
-@keyframes slide-top-in {
-    from {
-        transform: translateY(-200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-left-in {
-    from {
-        transform: translateX(-200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-bottom-in {
-    from {
-        transform: translateY(200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right-in {
-    from {
-        transform: translateX(200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes animate-gradient {
-    to { background-position: 200%;}
-}
-
-@keyframes scroll-left {
-    from { left: calc(100% + var(--item-margin, 20px)); }
-    to { left: calc(-1 * (var(--item-width, 200px) + var(--item-margin, 20px))); }
-}
-
-@keyframes water_wave {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-        top: -20%;
-    }
-    25% {
-        top: -40%
-    }
-    50% {
-        top: -60%
-    }
-    75% {
-        top: -40%
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(3600deg);
-        top: -20%
-    }
-}

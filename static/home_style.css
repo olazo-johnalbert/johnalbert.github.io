@@ -1,107 +1,33 @@
+@import url('keyframes.css');
+
 :root {
     --backround-color: #fff;
-    --card-box-shadow: -5px -5px 10px rgba(255,255,255, 0.8),
-    5px 5px 10px rgba(70, 70, 70, 0.32);
+    --card-box-shadow: -3px -3px 5px rgba(255,255,255, 0.8),
+    3px 3px 5px rgba(70, 70, 70, 0.32);
     --blur-value: 10px;
 }
 /* <------------------------------------------------------------------------> */
 
 .container {
+    width: 85vw;
+    max-height: 90vh;
     display: grid;
-    width: 85%;
+    padding: 0;
     /* grid-template-columns: 27% 27% 15% 27%; */
     /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    grid-template-columns: 30% 26% 15% 30%; 
-    grid-template-rows: 50% 30% 25%;
+    grid-template-columns: 27% 26% 15% 27%; 
+    grid-template-rows: 50% 30% 12%;
     grid-template-areas: 
         "welcome education wave projects"
         "welcome tech tech projects"
         "welcome quote quote projects";
-    height: 100%;
-    /* grid-auto-columns: minmax(190px, auto); */
-    grid-row-gap: 5%;
-    grid-column-gap: 1%;
-    padding: 0;
+    grid-row-gap: 25px;
+    grid-column-gap: 10px;
     justify-content: center;
     align-items: center;
     /* margin: 20px; */
 }
-@media (max-width: 992px) {
-    .container {
-        grid-template-columns: 0.6fr 0.2fr;
-        grid-template-rows: 
-            10fr
-            5fr
-            2fr
-            2fr
-            2fr;
-        grid-template-areas: 
-            "welcome welcome"
-            "education wave"
-            "tech tech"
-            "projects projects"
-            "quote quote";
-        align-items: start;
-        gap: 1%;
-    }
-    .card {
-        align-items: start;
-    }
-}
-.container * {
-    z-index: 1;
-    transition: 0.3s ease; 
-}
-.container > *:hover {
-    transform: translateY(-5px);
-}
-.container:hover > :not(:hover) {
-    opacity: 0.2;
-}
 
-@keyframes slide-top-in {
-    from {
-        transform: translateY(-200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-left-in {
-    from {
-        transform: translateX(-200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-bottom-in {
-    from {
-        transform: translateY(200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-right-in {
-    from {
-        transform: translateX(200%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
 
 /* <------------------------------------------------------------------------> */
 
@@ -126,39 +52,22 @@
     /* background-color: red; */
     margin-top: 0;
     /* margin: 0; */
-    font-size: clamp(1.5rem, 12vw, 2rem);
+    font-size: 2rem;
 }
 #welcome-photocard h2 {
     text-align: left;
     align-self: flex-start;
-    /* width: 100%; */
+    /* width: 100%;*/
 }
 #welcome-photocard p {
     /* font-size: clamp(1rem, 4vw, 1rem); */
-    font-size: 0.5rem;
+    font-size: clamp(1rem, 2vw, 1rem);
     font-weight: 300;
     text-wrap: wrap;
     padding: 0;
     margin: 0;
 }
-@media only screen and (max-width: 720px) {
-    .photocard-container h1 {
-        /* background-color: red; */
-        margin-top: 0;
-        /* margin: 0; */
-        font-size: 4rem;
-    }
-    #welcome-photocard h2 {
-        text-align: left;
-        align-self: flex-start;
-        /* width: 100%; */
-        font-size: 3rem;
-    }
-    #welcome-photocard p {
-        /* font-size: clamp(1rem, 4vw, 1rem); */
-        font-size: 2rem;
-    }
-}
+
 .photo-container {
     /* background-color: #ef2020; */
     height: clamp(80%, 10vh, 100%);
@@ -220,20 +129,6 @@
 .education-title h6 {
     font-weight: 300;
     font-size: 0.1rem;
-}
-@media only screen and (max-width: 720px) {
-    .education-info h5{
-        font-size: 1rem;
-    }
-    .education-info p {
-        font-size: 1rem;
-    }
-    .education-title h4 {
-        font-size: 1rem;
-    }
-    .education-title h6 {
-        font-size:0.1rem;
-    }
 }
 /* <------------------------------------------------------------------------> */
 
@@ -384,11 +279,7 @@ hr {
     padding: 0;
     /* border: red 1px solid; */
 }
-@media only screen and (max-width: 720px){
-    .projects-container {
-        flex-direction: row;
-    }
-}
+
 .project {
     position: relative; 
     width: 100%;

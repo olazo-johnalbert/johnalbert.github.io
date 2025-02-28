@@ -1,0 +1,46 @@
+@import url('../css/common.css');
+
+.container {
+    grid-template-columns: 27% 26% 15% 27%;
+    grid-template-rows: 50% 30% 25%;
+    grid-template-areas: 
+        "welcome education wave projects"
+        "welcome tech tech projects"
+        "welcome quote quote projects";
+    grid-row-gap: 5%;
+    grid-column-gap: 1%;
+}
+
+#welcome-photocard {
+    grid-area: welcome;
+    animation: slide-bottom-in 0.3s ease;
+}
+
+#education-card {
+    grid-area: education;
+    animation: slide-right-in 0.3s ease;
+    animation-delay: 0.2s;
+}
+
+#rand-img-card {
+    grid-area: wave;
+    animation: slide-top-in 0.3s ease;
+}
+
+#experience-card {
+    grid-area: tech;
+    animation: slide-bottom-in 0.3s ease;
+    animation-delay: 0.4s;
+}
+
+#quote-card {
+    grid-area: quote;
+    animation: slide-bottom-in 0.3s ease;
+    animation-delay: 0.8s;
+}
+
+#projects-card {
+    grid-area: projects;
+    animation: slide-right-in 0.3s ease;
+    animation-delay: 0.5s;
+}

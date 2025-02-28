@@ -1,0 +1,43 @@
+@import url('common.css');
+
+.container {
+    grid-template-columns: 350px 500px;
+    grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem;
+    grid-gap: 1.042vw;
+}
+
+.card h6 {
+    text-align: left;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.card input {
+    border: rgba(70, 70, 70, 0.3) 2px solid;
+    border-radius: 5px;
+    padding: 0.8rem 15px;
+    font-size: 0.5rem;
+    width: 80%;
+    outline: none;
+}
+
+.card .placeholder {
+    position: absolute;
+    left: 2.5em;
+    top: 45%;
+    transform: translateY(-50%);
+    font-weight: 300;
+    color: #555;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+.card input:focus + .placeholder,
+.card input:valid + .placeholder {
+    transform: translateY(-180%);
+    font-weight: 100;
+    font-size: 0.05rem;
+    left: 8%;
+    color: #636363;
+}

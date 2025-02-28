@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Space+Grotesk:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/contact_style.css" rel="stylesheet">
+
+</head>
+<script src="../js/script.js"></script>
+<script src="../js/activePage.js"></script>
+
+<body>
+    <header>
+        <h4>Albert</h4>
+        <div class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="">Contact</a>
+            <span></span>
+        </div>
+        <div id="hamburger-menu">
+            <div id="hamburger-bar" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+            <ul class="nav-list" id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+        </div>
+    </header>
+    <form action="/submit" method="POST" class="tile-container">
+        <div class="container">
+            <div class="card" id="contact-card">
+                <div class="wave">
+                    <h1>CONTACT ME</h1>
+                </div>
+            </div>
+            
+            <div class="card" id="name-card">
+                <input type="name" name="name" class="input-box" required>
+                <span class="placeholder">Name here</span>
+                <span class="border"></span>
+            </div>
+
+            <div class="card" id="message-card">
+                <!-- <h6>Message here</h6> -->
+                <textarea placeholder="Message here..."></textarea>
+                <div class="wrapper">
+                    <div class="link_wrapper">
+                        <a href="#">Send Message</a>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path
+                                    d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 
+                                12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 
+                                12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 
+                                5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="email-card">
+                <!-- <h6>Email here</h6> -->
+                <input type="email" name="email" class="input-box" required>
+                <span class="placeholder">Email here</span>
+                <span class="border"></span>
+            </div>
+            <div class="card" id="subject-card">
+                <!-- <h6>Subject here</h6> -->
+                <input type="text" name="subject" class="input-box" required>
+                <span class="placeholder">Subject here</span>
+                <span class="border"></span>
+            </div>
+            <div class="contact-links">
+                <a href="https://www.facebook.com" target="_blank">
+                    <object type="image/svg+xml" data="../icons/contact/facebook.svg" class="svg-icon"></object>
+                </a>
+                <a href="https://www.google.com" target="_blank">
+                    <object type="image/svg+xml" data="../icons/contact/google.svg" class="svg-icon"></object>
+                </a>
+                <a href="https://www.github.com" target="_blank">
+                    <object type="image/svg+xml" data="../icons/contact/github.svg" class="svg-icon"></object>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <object type="image/svg+xml" data="../icons/contact/in.svg" class="svg-icon"></object>
+                </a>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
