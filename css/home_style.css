@@ -359,6 +359,7 @@ hr {
 
 @media only screen and (max-width: 1080px) {
     .container {
+        background-color: red;
         width: 100%;
         /* height: fit-content; */
         height: auto;

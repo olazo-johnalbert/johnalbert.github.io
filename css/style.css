@@ -175,7 +175,7 @@ header h4 {
     display: block;
 }
 
-@media (max-width: 1080px) {
+@media only screen and (max-width: 1080px) {
     header {
         gap: 70%;
     }
