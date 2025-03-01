@@ -10,8 +10,11 @@
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-columns: 350px 500px;
-    grid-template-rows: 11rem 5.5rem 5.5rem 5.5rem;
+    grid-template-areas: 
+        "contact-card contact-card"
+        "name-card message-card"
+        "email-card message-card"
+        "subject-card message-card";
     grid-gap: 1.042vw;
     justify-content: center;
     align-items: center;
@@ -21,7 +24,13 @@
 /* ==================== */
 /* Card Styles */
 /* ==================== */
-
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
 .card h6 {
     text-align: left;
     margin: 0;
@@ -29,7 +38,6 @@
     padding: 0;
 
 }
-
 .card input {
     border: none;
     appearance: none;
@@ -43,10 +51,7 @@
     width: 80%;
     outline: none;
     z-index: 2;
-    /* box-shadow: 2px 2px 3px rgba(255,255,255, 0.3),
-    -2px -2px 3px rgba(70, 70, 70, 0.32); */
     border: rgba(70, 70, 70, 0.3) 2px solid;
-    /* background-color: rgba(255,255,255,0.5); */
     background-color: transparent;
 
 }
@@ -73,7 +78,6 @@
 .card input:focus+.placeholder,
 .card input:valid+.placeholder {
     transform: translateY(-180%);
-    /* font-family: "Calibri", sans-serif; */
     font-weight: 100;
     font-size: 0.05rem;
     left: 8%;
@@ -87,19 +91,12 @@
 .card input:-webkit-autofill:focus,
 .card input:-webkit-autofill:active {
     -webkit-text-fill-color: #000 !important;
-    /* Change the text color */
     transition: background-color 5000s ease-in-out 0s;
-    /* Prevent background color from changing */
     border: rgba(70, 70, 70, 0.3) 2px solid;
-    /* Maintain border-bottom style */
     font-size: 0.5rem;
-    /* Maintain font size */
     border-radius: 5px;
-    /* Maintain border radius */
     outline: none;
-    /* Maintain outline */
     z-index: 2;
-    /* Maintain z-index */
 }
 
 #name-card,
@@ -115,9 +112,9 @@
 }
 
 #contact-card {
-    grid-column: span 2;
-    grid-row: span 1;
-    height: 100%;
+    grid-area: contact-card;
+    width: calc(10rem + 50vw);
+    height: 20vh;
     box-sizing: border-box;
     display: flex;
     align-items: left;
@@ -160,13 +157,13 @@
 
 .wave::after {
     border-radius: 45%;
-    animation: water_wave 60s linear infinite;
+    animation: water_wave 20s linear infinite;
 }
 
 .wave::before {
     border-radius: 25%;
     background: rgba(255, 136, 0, 0.765);
-    animation: water_wave 60s linear infinite;
+    animation: water_wave 20s linear infinite;
 }
 
 @keyframes water_wave {
@@ -175,7 +172,7 @@
     }
 
     100% {
-        transform: rotate(3600deg);
+        transform: rotate(360deg);
     }
 }
 
@@ -190,30 +187,26 @@
 }
 
 #name-card {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-area: name-card;
     animation: slide-bottom-in 0.5s ease 0.5s;
     animation-fill-mode: backwards;
 }
 
 #email-card {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-area: email-card;
     animation: slide-bottom-in 0.5s ease 0.8s;
     animation-fill-mode: backwards;
 }
 
 #subject-card {
-    grid-column: span 1;
-    grid-row: span 1;
+    grid-area: subject-card;
     animation: slide-bottom-in 0.5s ease 1s;
     animation-fill-mode: backwards;
 
 }
 
 #message-card {
-    grid-column: span 1;
-    grid-row: span 3;
+    grid-area: message-card;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -231,12 +224,9 @@
     height: 100%;
     border-radius: 5px;
     background-color: transparent;
-    /* background-color: rgba(255,255,255,0.5); */
     border: none;
     resize: none;
     margin: 5% 0;
-    /* border-top: rgba(70, 70, 70, 0.3) 2px solid;
-    border-bottom: rgba(70, 70, 70, 0.3) 2px solid; */
     border: rgba(255, 255, 255, 0.3) 2px solid;
     outline: none;
     padding: 1rem;
@@ -324,7 +314,6 @@
     top: calc(50% - 15px);
     left: calc(50% - 15px);
     fill: #ffffff;
-    /* opacity: 0; */
     transition: all .35s;
 }
 
@@ -348,7 +337,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0;
     gap: 30px;
 }
 

@@ -13,6 +13,8 @@
 </head>
 <script src="../js/script.js"></script>
 <script src="../js/activePage.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="../js/form.js"></script>
 
 <body>
     <header>
@@ -37,37 +39,18 @@
                 <li><a href="#">Contact</a></li>
         </div>
     </header>
-    <form action="/submit" method="POST" class="tile-container">
-        <div class="container">
+    <div class="tile-container">
+        <div class="container" id="contact-form">
             <div class="card" id="contact-card">
                 <div class="wave">
                     <h1>CONTACT ME</h1>
                 </div>
             </div>
-            
+
             <div class="card" id="name-card">
                 <input type="name" name="name" class="input-box" required>
                 <span class="placeholder">Name here</span>
                 <span class="border"></span>
-            </div>
-
-            <div class="card" id="message-card">
-                <!-- <h6>Message here</h6> -->
-                <textarea placeholder="Message here..."></textarea>
-                <div class="wrapper">
-                    <div class="link_wrapper">
-                        <a href="#">Send Message</a>
-                        <div class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
-                                <path
-                                    d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 
-                                12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 
-                                12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 
-                                5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
             </div>
             <div class="card" id="email-card">
                 <!-- <h6>Email here</h6> -->
@@ -80,6 +63,24 @@
                 <input type="text" name="subject" class="input-box" required>
                 <span class="placeholder">Subject here</span>
                 <span class="border"></span>
+            </div>
+            <div class="card" id="message-card">
+                <!-- <h6>Message here</h6> -->
+                <textarea name="message" placeholder="Message here..."></textarea>
+                <div class="wrapper">
+                    <div class="link_wrapper">
+                        <a onclick="sendMail();">Send Message</a>
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+                                <path
+                                    d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 
+                                12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 
+                                12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 
+                                5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="contact-links">
                 <a href="https://www.facebook.com" target="_blank">
@@ -96,7 +97,8 @@
                 </a>
             </div>
         </div>
-    </form>
+    </div>
+
 </body>
 
 </html>

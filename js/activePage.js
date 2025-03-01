@@ -28,4 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         activeLink.classList.add('active');
         updateActiveIndicator(activeLink);
     }
+    
+    window.scrollTo(0, 0); 
+
 });
