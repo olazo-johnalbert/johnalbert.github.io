@@ -357,7 +357,7 @@ hr {
     border-radius: 8px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1080px) {
     .container {
         width: 100%;
         /* height: fit-content; */
