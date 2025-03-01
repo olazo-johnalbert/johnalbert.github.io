@@ -239,7 +239,7 @@ header h4 {
     }
     header {
         top: 20px;
-        width: 85%;
+        width: 100vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
