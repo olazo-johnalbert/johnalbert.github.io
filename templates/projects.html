@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Space+Grotesk:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/project_style.css" rel="stylesheet">
+    <title>Projects</title>
+</head>
+
+<body>
+    <script src="../js/script.js"></script>
+    <script src="../js/activePage.js"></script>
+    <script src="../js/carousel.js"></script>
+    <header>
+        <h4>Albert</h4>
+        <div class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <span></span>
+        </div>
+        <div id="hamburger-menu">
+            <div id="hamburger-bar" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+            <ul class="nav-list" id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tile-container">
+        <div id="slideContainer" class="slide-container">
+            <section class="slide section">
+                <div class="container" id="project1">
+                    <div class="card" id="logo-card">
+                        <img src="../img/Spotter/Spotter.png">
+                    </div>
+                    <div class="card" id="title-card">
+                        <h1>Spotter: Smart Surveillance Subject Tracking Software</h1>
+                    </div>
+                    <div class="card" id="info-card">
+                        <div class="info-container">
+                            <hr>
+                            <ul>
+                                <li>Designed and developed a CCTV footage analysis tool using Python and OpenCV</li>
+                                <li>Implemented computer vision algorithms for motion detection and object tracking</li>
+                                <li>Gained experience in image processing and smart surveillance technologies</li>
+                            </ul>
+                            <hr>
+                        </div>
+                    </div>
+                    <div class="card" id="carousel-card">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-card-item" id="item1">
+                                <img src="../img/Spotter/Spotter_1.png">
+                            </div>
+                            <div class="carousel-card-item" id="item2">
+                                <img src="../img/Spotter/Spotter_2.png">
+                            </div>
+                            <div class="carousel-card-item" id="item3">
+                                <img src="../img/Spotter/Spotter_3.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide section">
+                <div class="container" id="project2">
+                    <div class="card" id="logo-card">
+                        <img src="../img/LexiGuess/LexiGuess.png">
+                    </div>
+                    <div class="card" id="title-card">
+                        <h1>LexiGuess</h1>
+                    </div>
+                    <div class="card" id="info-card">
+                        <div class="info-container">
+                            <hr>
+                            <ul>
+                                <li>Developed LexiGuess, a Wordle-inspired game in Turbo C++</li>
+                                <li>Contributed to design, development, and planning</li>
+                                <li>Improved skills in C/C++ programming and game mechanics</li>
+                            </ul>
+                            <hr>
+                        </div>
+                        <a href="https://github.com/Yuzumi/LexiGuess" target="_blank"></a>
+                    </div>
+                    <div class="card" id="carousel-card">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-card-item" id="item1">
+                                <img src="../img/LexiGuess/LexiGuess_1.png">
+                            </div>
+                            <div class="carousel-card-item" id="item2">
+                                <img src="../img/LexiGuess/LexiGuess_3.png">
+                            </div>
+                            <div class="carousel-card-item" id="item3">
+                                <img src="../img/LexiGuess/LexiGuess_7.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="slide section" id="project3">
+                <div class="container">
+                    <div class="card" id="logo-card">
+                        <img src="../img/FilmCurator/FilmCurator.jpg">
+                    </div>
+                    <div class="card" id="title-card">
+                        <h1>FilmCurator</h1>
+                    </div>
+                    <div class="card" id="info-card">
+                        <div class="info-container">
+                            <hr>
+                            <ul>
+                                <li>Co-developed both the frontend (Qt GUI) and backend (Python) with TMDB API
+                                    integration for a personalized recommendation system</li>
+                                <li>Implemented content-based filtering using machine learning techniques</li>
+                                <li>Collaborated with a team of 8 members, ensuring smooth development and deployment
+                                </li>
+                            </ul>
+                            <hr>
+                        </div>
+                        <a href="https://github.com/Yuzumi/MOVIE-RECO" target="_blank"></a>
+
+                    </div>
+                    <div class="card" id="carousel-card">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-card-item" id="item1">
+                                <img src="../img/FilmCurator/FilmCurator_1.png">
+                            </div>
+                            <div class="carousel-card-item" id="item2">
+                                <img src="../img/FilmCurator/FilmCurator_2.png">
+                            </div>
+                            <div class="carousel-card-item" id="item3">
+                                <img src="../img/FilmCurator/FilmCurator_3.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <ol class="dots-indicator">
+                <li><a href="#project1" class="active"></a></li>
+                <li><a href="#project2"></a></li>
+                <li><a href="#project3"></a></li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    } else {
+                        entry.target.classList.remove("active");
+                    }
+                });
+            }, { threshold: 0.8 });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+</body>
+
+</html>
