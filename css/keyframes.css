@@ -1,6 +1,6 @@
 @keyframes slide-top-in {
     from {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
         opacity: 0;
     }
     to {
@@ -11,7 +11,7 @@
 
 @keyframes slide-left-in {
     from {
-        transform: translateX(-200%);
+        transform: translateX(-100%);
         opacity: 0;
     }
     to {
@@ -22,7 +22,7 @@
 
 @keyframes slide-bottom-in {
     from {
-        transform: translateY(200%);
+        transform: translateY(100%);
         opacity: 0;
     }
     to {
@@ -33,7 +33,7 @@
 
 @keyframes slide-right-in {
     from {
-        transform: translateX(200%);
+        transform: translateX(100%);
         opacity: 0;
     }
     to {
@@ -46,9 +46,15 @@
     to { background-position: 200%;}
 }
 
+/* Continuous Scrolling Animation */
 @keyframes scroll-left {
-    from { left: calc(100% + var(--item-margin, 20px)); }
-    to { left: calc(-1 * (var(--item-width, 200px) + var(--item-margin, 20px))); }
+    from {
+        left: calc(100% + var(--item-margin, 30px));
+    }
+
+    to {
+        left: calc(-1 * (var(--item-width, 200px) + var(--item-margin, 30px)));
+    }
 }
 
 @keyframes water_wave {

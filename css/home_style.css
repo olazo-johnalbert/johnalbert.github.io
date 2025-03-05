@@ -15,13 +15,12 @@
     display: grid;
     padding: 0;
     grid-template-columns: 27% 26% 15% 27%;
-    grid-template-rows: 50% 30% 12%;
+    grid-template-rows: 50% 40% 10%;
     grid-template-areas:
         "welcome education wave projects"
         "welcome tech tech projects"
         "welcome quote quote projects";
-    grid-row-gap: 20px;
-    grid-column-gap: 10px;
+    grid-gap: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -92,15 +91,14 @@
     animation: slide-right-in 0.3s ease;
     animation-delay: 0.2s;
     animation-fill-mode: backwards;
+    padding: 10px;
     height: 100%;
-    justify-content: start;
-    align-items: start;
 }
 
 .education-info {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    margin: 10px;
 }
 
 .education-info h5 {
@@ -125,7 +123,7 @@
 .education-title h4 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: calc(0.8rem + 0.1vw);
     margin: 1px;
     margin-right: 2em;
 }
@@ -143,7 +141,7 @@
     display: flex;
     align-items: left;
     justify-content: left;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     animation: slide-top-in 0.3s ease;
     animation-delay: 0.6s;
     animation-fill-mode: backwards;
@@ -157,7 +155,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
     border-radius: 20px;
 
 }
@@ -165,9 +163,9 @@
 .wave::after,
 .wave::before {
     content: "";
-    position: absolute;
+    position: fixed;
     width: 200%;
-    height: 200%;
+    height: calc(125% + 75vh);
     top: -20%;
     left: 50%;
     background: #131313;
@@ -195,18 +193,21 @@
     animation: slide-bottom-in 0.3s ease;
     animation-delay: 0.4s;
     animation-fill-mode: backwards;
+    height: 100%;
 }
 
 #experience-card h3 {
+    font-size: (0.5rem, 0.5rem + 1.317vw, 1rem);
     font-weight: 700;
-    width: 30%;
+    width: auto;
     text-align: center;
     text-wrap: wrap;
     padding: 10px;
 }
 
 #experience-card ul {
-    height: 100%;
+    height: 50%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -218,8 +219,8 @@
 }
 
 .svg-icon {
-    width: 2.3em;
-    height: 2.3em;
+    width: 2.5vw;
+    height: 2.5vw;
 }
 
 /* <------------------------------------------------------------------------> */
@@ -256,9 +257,6 @@
 
 /* <------------------------------------------------------------------------> */
 
-hr {
-    opacity: 0.2;
-}
 
 #projects-card {
     grid-area: projects;
@@ -266,17 +264,23 @@ hr {
     animation: slide-right-in 0.3s ease;
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
-    /* padding: 10px; */
+    gap: 10%;
+}
+
+#project-title-container {
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    flex-direction: column;
 }
 
 #projects-card h1 {
     text-align: center;
-    font-size: 1rem;
+    font-size: calc(1rem + 0.5vw);
     font-weight: 700;
+    height: auto;
 }
 
 .projects-container {
@@ -285,7 +289,7 @@ hr {
     align-items: center;
     flex-direction: column;
     gap: 3%;
-    height: 100%;
+    height: auto;
     width: 100%;
     padding: 0;
 }
@@ -360,23 +364,24 @@ hr {
 @media only screen and (max-width: 1080px) {
     .container {
         width: 100%;
-        /* height: fit-content; */
-        height: auto;
+        max-height: 100%;
         display: grid;
         padding: 0;
-        grid-template-columns: 0.75fr 0.25fr;
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "welcome welcome"
-            "education wave"
-            "tech tech"
-            "projects projects"
-            "quote quote";
-        place-self: center;
-        gap: 40px;
+            "welcome"
+            "education"
+            "wave"
+            "tech"
+            "projects"
+            "quote";
+        grid-gap: 20px;
+        padding-bottom: 10px;
     }
 
     #welcome-photocard {
+        justify-self: center;
         grid-area: welcome;
         animation: slide-bottom-in 0.3s ease;
         animation-fill-mode: backwards;
@@ -388,22 +393,22 @@ hr {
         align-items: center;
         flex-direction: column;
         margin: 0;
-        padding: 50px;
+        padding: calc(10px + 2vw);
     }
 
     .photocard-container h1 {
         margin: 10px;
-        font-size: calc(5rem + 2vw);
+        font-size: calc(2rem + 2vw);
     }
 
     #welcome-photocard h2 {
         text-align: left;
         align-self: flex-start;
-        font-size: clamp(2rem, 2rem + 3vw, 6rem)
+        font-size: clamp(1.5rem, 1rem + 3vw, 2rem)
     }
 
     #welcome-photocard p {
-        font-size: clamp(1rem, 1.5rem + 2vw, 1.75rem);
+        font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
         text-align: justify;
         font-weight: 300;
         text-wrap: wrap;
@@ -439,26 +444,15 @@ hr {
         animation-delay: 0.2s;
         animation-fill-mode: backwards;
         padding: 30px 20px;
+        align-items: stretch;
     }
 
     .education-info {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 10px;
-    }
-
-    .education-info h5 {
-        margin: 2px 0px 2px 0px;
-        font-size: 1.5rem;
-        font-weight: 500;
-        text-align: left;
-    }
-
-    .education-info p {
-        margin: 1px;
-        font-size: 1.5rem;
-        font-weight: 300;
-        opacity: 0.6;
+        padding: 0;
+        margin: 10px 4vw;
     }
 
     .education-title {
@@ -469,17 +463,32 @@ hr {
     .education-title h4 {
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 1.75rem;
+        font-size: clamp(0.5rem, 0.5rem + 2vw, 2rem);
         margin: 1px;
-        margin-right: 2em;
+        margin-right: 1rem;
     }
 
     .education-title #year {
         font-weight: 300;
     }
 
+    .education-info h5 {
+        margin: 2px 0px 2px 0px;
+        font-size: clamp(0.5rem, 0.5rem + 1.5vw, 1.5rem);
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .education-info p {
+        margin: 1px;
+        font-size: clamp(0.5rem, 0.5rem + 1.1vw, 1.2rem);
+        font-weight: 300;
+        opacity: 0.6;
+    }
+
     /* ---------------------------------------------------------------------- */
     #rand-img-card {
+        height: 240px;
         grid-area: wave;
         display: flex;
         align-items: left;
@@ -495,16 +504,18 @@ hr {
     /* ---------------------------------------------------------------------- */
     #experience-card {
         grid-area: tech;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-evenly;
         padding: 50px 15px;
         animation: slide-bottom-in 0.3s ease;
         animation-delay: 0.4s;
         animation-fill-mode: backwards;
+        padding: 10px;
     }
 
     #experience-card h3 {
-        font-size: 2rem;
+        width: auto;
+        font-size: 1.5rem;
         font-weight: 700;
         text-align: center;
         text-wrap: wrap;
@@ -518,14 +529,14 @@ hr {
         justify-content: center;
         align-items: center;
         list-style: none;
-        margin: 10px;
+        margin: 20px;
         flex-wrap: wrap;
         gap: 10px;
     }
 
     .svg-icon {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
     /* ---------------------------------------------------------------------- */
@@ -534,27 +545,20 @@ hr {
         animation: slide-right-in 0.3s ease;
         animation-delay: 0.5s;
         animation-fill-mode: backwards;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+        height: auto;
+        gap: 5vh;
+        padding: 5vh;
     }
 
     .projects-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        gap: 3%;
-        height: 100%;
+        flex-direction: column;
+        gap: 3px;
+        height: auto;
         width: 100%;
-        padding: 0;
     }
 
     #projects-card h1 {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 700;
+        font-size: calc(1rem, 1rem + 2vw, 2rem);
     }
 
     .project {
@@ -582,12 +586,13 @@ hr {
     }
 
     .project h4 {
-        font-size: 1.5rem;
+        font-size: 0.5rem;
         top: 75%;
         margin: 0;
-        padding: 0 25px;
-        opacity: 1;
+        padding: 0 2rem;
+        opacity: 0;
         color: #ffa641;
+        align-self: flex-start;
         background: none;
         background-clip: initial;
         -webkit-background-clip: initial;
@@ -601,6 +606,6 @@ hr {
 
     /* ---------------------------------------------------------------------- */
     #quote-card h1 {
-        font-size: 2rem;
+        font-size: 0.5rem;
     }
 }

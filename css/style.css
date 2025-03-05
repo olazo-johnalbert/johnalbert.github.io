@@ -14,33 +14,33 @@
 }
 body {
     font-family: "Space Grotesk", serif;
-    min-height: 100vh;
+    min-height: auto;
     display: grid;
     place-items: center;
     grid-template-columns: 1fr;
     grid-template-areas: 
-    "header"
-    "tile-container";
+        "header"
+        "tile-container";
     gap: 20px;
     overflow: hidden;
     background-color: #dfdfdf;
+    padding: 20px;
 }
 
 hr {
-    background-color: #616161;
-    border-radius: 3px;
-    height: 1px;
+    background-color: #5c5c5c;
+    border-radius: 10px;
+    height: 3px;
     width: 80%;
     margin: 0;
-    opacity: 0.3;
+    box-shadow: var(--card-box-shadow);
+    opacity: 0.8;
 }
 
 /* <------------------------------------------------------------------------> */
 header {
-    border: red 1px solid;
     grid-area: header;
-    position: fixed;
-    top: 0px;
+    position: sticky;
     top: 20px;
     width: 90vw;
     display: flex;
@@ -119,9 +119,9 @@ header h4 {
     align-items: center;
     gap: 5px;
     padding: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     transition: 0.3s;
-    /* opacity: 0; */
+    opacity: 0;
 }
 
 .bar {
@@ -176,11 +176,7 @@ header h4 {
 }
 
 @media only screen and (max-width: 1080px) {
-    header {
-        gap: 70%;
-    }
     .nav-bar {
-        opacity: 0;
         display: none;
     }
 
@@ -190,16 +186,15 @@ header h4 {
 }
 
 .tile-container {
+    /* border: blue 1px solid; */
     grid-area: tile-container;
-    transform: translateY(0px);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 85vh;
-    margin: 0;
+    width: 100%;
+    height: auto;
+    max-height: unset;
     padding: 0;
-    z-index: 0;
 }
 
 
@@ -222,37 +217,43 @@ header h4 {
     margin: 0;
     overflow: hidden;
 }
+.footer {
+    display: none;
+}
 
 @media only screen and (max-width: 1080px) {
     body {
         font-family: "Space Grotesk", serif;
-        height: auto;
+        min-height: auto;
         display: grid;
         place-items: center;
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
             "header"
             "tile-container";
-        gap: 100px;
+        gap: 40px;
         overflow: auto;
-        background-color: #dfdfdf;
+        scrollbar-gutter: stable both-edges;
     }
     header {
-        top: 20px;
-        width: 85%;
+        top: 0;
+        position: sticky;
+        padding: 15px;
+        width: 100%;
+        background-color: #dfdfdf;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        gap: 80%;
+        gap: 50vw;
         z-index: 111;
     }
     header h4 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .tile-container {
         grid-area: tile-container;
-        height: auto;
-        /* min-height: 200vh; */
+        max-height: unset;
     }
 }
 
