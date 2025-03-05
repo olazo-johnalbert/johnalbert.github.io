@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
-    const dots = document.querySelectorAll(".dots-indicator li a");
+    const dots = document.querySelectorAll(".dots-indicator li")
     let activeIndex = 0; // Start at first slide
 
     function showSlide(index) {
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dots-indicator li");
