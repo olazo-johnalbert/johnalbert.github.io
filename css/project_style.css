@@ -164,6 +164,7 @@
     align-items: center;
     /* border: brown 1px solid; */
     padding: 2rem;
+    gap: 5%;
 }
 
 .info-container {
@@ -213,9 +214,9 @@
 }
 
 #info-card a {
-    /* border: 1px green solid; */
     margin: 0;
     padding: 0;
+    align-self: center;
     background: url("../icons/tech/github.svg");
     background-position: center;
     background-repeat: no-repeat;
@@ -234,16 +235,15 @@
     margin-inline: auto;
     position: relative;
     height: 100%;
-    display: flex;
-    gap: 30px;
+    padding: 0.5vw;
     overflow: hidden;
     white-space: nowrap;
 }
 
 .carousel-card-item {
     position: absolute;
-    height: 100%;
-    width: 12vw;
+    height: 90%;
+    width: 40%;
     border-radius: 8px;
     left: 100%;
     /* flex: 0 0 var(--item-width); */

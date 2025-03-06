@@ -1,39 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Space+Grotesk:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        
-    </head>
-    <script src="../js/script.js"></script>
-    <script src="../js/activePage.js"></script>
-    <body>
-        <header>
-            <h4>Albert</h4>
-            <div class="nav-bar">
-                <a href="../index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="">Services</a>
-                <a href="contact.html">Contact</a>
-                <span></span>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Space+Grotesk:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/services.css" rel="stylesheet">
+</head>
+<script src="../js/script.js"></script>
+<script src="../js/activePage.js"></script>
+
+<body>
+    <header>
+        <h4>Albert</h4>
+        <div class="nav-bar">
+            <a href="../index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="">Services</a>
+            <a href="contact.html">Contact</a>
+            <span></span>
+        </div>
+        <div id="hamburger-menu">
+            <div id="hamburger-bar" onclick="onClickMenu()">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
             </div>
-            <div id="hamburger-menu">
-                <div id="hamburger-bar" onclick="onClickMenu()">
-                    <div class="bar" id="bar1"></div>
-                    <div class="bar" id="bar2"></div>
-                    <div class="bar" id="bar3"></div>
+            <ul class="nav-list" id="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Services</a></li>c
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="tile-container">
+        <div class="container">
+            <div class="card" id="titleCard">
+                <h1>WHAT CAN I DO FOR YOU?</h1>
+            </div>
+            <div class="card" id="description">
+                <ul>
+                    <li>
+                        <object type="image/svg+xml" data="../icons/services/puzzle.svg" class="svg-icon"></object>
+                        <div class="detail-container">
+                            <strong>Creative Problem-Solving</strong>
+                            <p>
+                                I enjoy breaking down complex problems and finding
+                                intuitive solutions, especially in UI/UX and backend systems.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <object type="image/svg+xml" data="../icons/services/like.svg" class="svg-icon"></object>
+                        <div class="detail-container">
+
+                            <strong>User-Centric Thinking</strong>
+                            <p>I focus on designing interfaces and experiences that
+                                feel natural and accessible.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <object type="image/svg+xml" data="../icons/services/glass.svg" class="svg-icon"></object>
+                        <div class="detail-container">
+                            <strong>Detail-Oriented Mindset</strong>
+                            <p>
+                                Whether it’s QA testing or graphic design, I pay
+                                close attention to the little details that make a big difference.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <object type="image/svg+xml" data="../icons/services/shake.svg" class="svg-icon"></object>
+                        <div class="detail-container">
+                            <strong>Team Collaboration</strong>
+                            <p>
+                                I thrive in team settings, whether working on development
+                                sprints, design iterations, or testing workflows.
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <object type="image/svg+xml" data="../icons/services/books.svg" class="svg-icon"></object>
+                        <div class="detail-container">
+                            <strong>Adaptability & Continuous Learning</strong>
+                            <p>
+                                I’m always open to learning new tools,
+                                frameworks, and methodologies to improve my work.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="card" id="service1">
+                <div class="info-container">
+                    <object type="image/svg+xml" data="../icons/services/webdev.svg" class="svg-icon-exp"></object>
+                    <div class="info-text-container">
+                        <strong>Web Development</strong>
+                        <p>
+                            I create sleek and responsive websites using modern technologies. From
+                            front-end aesthetics to back-end functionality, I ensure smooth user experiences and clean,
+                            scalable code.
+                        </p>
+                    </div>
                 </div>
-                <ul class="nav-list" id="nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
             </div>
-        </header>
-    </body>
+            <div class="card" id="service2">
+                <div class="info-container">
+                    <object type="image/svg+xml" data="../icons/services/designer.svg" class="svg-icon-exp"></object>
+                    <div class="info-text-container">
+                        <strong>Graphic Design</strong>
+                        <p>
+                            I design visually compelling and user-friendly interfaces that enhance engagement. My
+                            approach
+                            blends creativity with usability, ensuring intuitive navigation and a strong brand presence.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="service3">
+                <div class="info-container">
+                    <object type="image/svg+xml" data="../icons/services/qa.svg" class="svg-icon-exp"></object>
+                    <div class="info-text-container">
+                        <strong>QA Testing</strong>
+                        <p>
+                            I meticulously test applications to identify and fix bugs, ensuring seamless performance
+                            across devices. My detail-oriented approach guarantees a polished, high-quality final
+                            product.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

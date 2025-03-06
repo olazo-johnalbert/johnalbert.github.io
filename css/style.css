@@ -25,6 +25,25 @@ body {
     overflow: hidden;
     background-color: #dfdfdf;
     padding: 20px;
+    border: 1px solid red;
+}
+
+::-webkit-scrollbar {
+    width: 1vw;
+    margin: 1vw;
+    background-color: transparent;
+    border-radius: 10px;
+    right: 50%;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #030303;
+    border: 2px solid #fff;
 }
 
 hr {
@@ -43,12 +62,13 @@ header {
     position: sticky;
     top: 20px;
     width: 90vw;
+    height: 10%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 20vw;
     margin: 0;
-    z-index: 111;
+    z-index: 1000;
 }
 
 header h4 {
@@ -186,12 +206,12 @@ header h4 {
 }
 
 .tile-container {
-    /* border: blue 1px solid; */
     grid-area: tile-container;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 90%;
     height: auto;
     max-height: unset;
     padding: 0;
@@ -202,8 +222,7 @@ header h4 {
     box-shadow: var(--card-box-shadow);
     display: flex;
     flex-direction: column;
-    padding: 10px 20px 10px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
@@ -215,8 +234,18 @@ header h4 {
     animation-timing-function: ease;
     animation-fill-mode: backwards;
     margin: 0;
+    padding: 0;
     overflow: hidden;
+    transition: 0.3s ease-out;
 }
+
+.card:hover {
+    transform: translateY(-0.3vw);
+    box-shadow: -1px -1px 0px white,
+        10px 10px 10px rgba(0, 0, 0, 0.3);
+    z-index: 500;
+}
+
 .footer {
     display: none;
 }
@@ -239,14 +268,13 @@ header h4 {
     header {
         top: 0;
         position: sticky;
-        padding: 15px;
+        padding: 20px;
         width: 100%;
         background-color: #dfdfdf;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50vw;
-        z-index: 111;
     }
     header h4 {
         font-size: 1.5rem;

@@ -11,16 +11,16 @@
 
 .container {
     width: 85vw;
-    max-height: 90vh;
+    min-height: 80vh;
     display: grid;
     padding: 0;
     grid-template-columns: 27% 26% 15% 27%;
-    grid-template-rows: 50% 40% 10%;
+    grid-template-rows: 48% 38% 8%;
     grid-template-areas:
         "welcome education wave projects"
         "welcome tech tech projects"
         "welcome quote quote projects";
-    grid-gap: 10px;
+    grid-gap: 1vw;
     justify-content: center;
     align-items: center;
 }
@@ -33,15 +33,17 @@
     height: 100%;
     animation: slide-bottom-in 0.3s ease;
     animation-fill-mode: backwards;
+    padding: 0;
 }
 
 .photocard-container {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 0;
-    padding: 5%;
+    padding: 2vw;
 }
 
 .photocard-container h1 {
@@ -52,11 +54,11 @@
 #welcome-photocard h2 {
     text-align: left;
     align-self: flex-start;
-    /* width: 100%;*/
+    width: 100%;
 }
 
 #welcome-photocard p {
-    font-size: clamp(0.5rem, 0.5rem + 2vw, 1rem);
+    font-size: clamp(0.5rem, 0.5rem + 0.1vw, 1rem);
     font-weight: 300;
     text-wrap: wrap;
     padding: 0;
@@ -64,9 +66,10 @@
 }
 
 .photo-container {
-    height: clamp(80%, 10vh, 100%);
-    width: clamp(80%, 5vw, 100%);
+    /* height: clamp(80%, 10vh, 100%);
+    width: clamp(80%, 5vw, 100%); */
     position: relative;
+    align-self: flex-end;
     display: flex;
     place-content: center;
     place-items: center;
@@ -78,10 +81,10 @@
 
 .photo-container img {
     position: relative;
-    top: 5px;
+    /* top: 5px; */
     width: 100%;
     height: 120%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* <------------------------------------------------------------------------> */
@@ -265,6 +268,7 @@
     animation-delay: 0.5s;
     animation-fill-mode: backwards;
     gap: 10%;
+    padding: 3%; 
 }
 
 #project-title-container {
@@ -363,7 +367,7 @@
 
 @media only screen and (max-width: 1080px) {
     .container {
-        width: 100%;
+        width: 85%;
         max-height: 100%;
         display: grid;
         padding: 0;
@@ -409,7 +413,7 @@
 
     #welcome-photocard p {
         font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
-        text-align: justify;
+        /* text-align: justify; */
         font-weight: 300;
         text-wrap: wrap;
         padding: 0;
@@ -421,8 +425,9 @@
         width: clamp(80%, 5vw, 100%);
         position: relative;
         display: flex;
-        place-content: center;
-        place-items: center;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
         border-radius: 20px;
         padding: 0;
@@ -430,7 +435,6 @@
     }
 
     .photo-container img {
-        position: relative;
         top: 5px;
         width: 100%;
         height: 120%;
