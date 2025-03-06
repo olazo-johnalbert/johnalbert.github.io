@@ -1,0 +1,78 @@
+@keyframes slide-top-in {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-left-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-bottom-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-right-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animate-gradient {
+    to { background-position: 200%;}
+}
+
+/* Continuous Scrolling Animation */
+@keyframes scroll-left {
+    from {
+        left: calc(100% + var(--item-margin, 30px));
+    }
+
+    to {
+        left: calc(-1 * (var(--item-width, 200px) + var(--item-margin, 30px)));
+    }
+}
+
+@keyframes water_wave {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+        top: -20%;
+    }
+    25% {
+        top: -40%
+    }
+    50% {
+        top: -60%
+    }
+    75% {
+        top: -40%
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(3600deg);
+        top: -20%
+    }
+}
