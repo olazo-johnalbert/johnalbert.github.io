@@ -494,7 +494,7 @@
     #rand-img-card {
         height: 240px;
         grid-area: wave;
-        display: flex;
+        /* display: none; */
         align-items: left;
         justify-content: left;
         box-sizing: border-box;

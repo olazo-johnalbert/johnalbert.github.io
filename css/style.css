@@ -25,7 +25,7 @@ body {
     overflow: hidden;
     background-color: #dfdfdf;
     scrollbar-gutter: stable both-edges;
-    padding: 1%;
+    padding: 0.5%;
 }
 
 ::-webkit-scrollbar {
@@ -208,7 +208,7 @@ header h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 95vw;
     min-height: 85vh;
     height: auto;
     max-height: unset;
@@ -248,7 +248,7 @@ header h4 {
     display: none;
 }
 
-@media only screen and (max-width: 1080px) {
+/* @media only screen and (max-width: 1080px) {
     body {
         font-family: "Space Grotesk", serif;
         min-height: auto;
@@ -288,5 +288,5 @@ header h4 {
         transform: none;
         box-shadow: none;
     }
-}
+} */
 

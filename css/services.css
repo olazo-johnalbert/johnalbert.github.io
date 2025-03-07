@@ -10,8 +10,8 @@
         17% 39% 39%;
     grid-template-areas:
         "title title title"
-        "description service1 service1"
-        "description service2 service3";
+        "description service1 service2"
+        "description service3 service4";
     gap: 1vw;
 }
 
@@ -132,9 +132,16 @@
     animation: slide-bottom-in 0.3s ease 0.9s backwards;
 }
 
+#service4 {
+    grid-area: service4;
+    height: 100%;
+    width: 100%;
+    animation: slide-bottom-in 0.3s ease 0.9s backwards;
+}
+
 
 .info-container {
-    /* border: 1px red solid; */
+    height: 100%;
     display: flex;
     justify-content: start;
     align-items: start;
@@ -142,15 +149,11 @@
     padding: 3%;
     margin: 0;
     gap: 0;
+    transform: scale(0.9, 0.85);
 }
 
 .svg-icon-exp {
     align-self: start;
-    width: 64px;
-    height: 64px;
-}
-#service2 .svg-icon-exp,
-#service3 .svg-icon-exp {
     width: 32px;
     height: 32px;
 }
@@ -160,13 +163,9 @@
     padding: 1.1%;
     margin: 0;
 }
-#service2 .info-container,
-#service3 .info-container {
-    transform: scale(0.9);
-}
 
-.info-container strong{
-    font-size: 10%;
+.info-text-container strong{
+    font-size: calc(0.5rem + 0.5vw);
 }
 
 .info-container p {

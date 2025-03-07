@@ -13,10 +13,6 @@
 
 /* -------------------------------------------------------------------------- */
 
-.tile-container {
-    width: 90vw;
-    height: auto;
-}
 
 .slide-container {
     display: flex;
