@@ -284,5 +284,9 @@ header h4 {
     .tile-container > * {
         animation: none;
     }
+    .tile-container > *:hover {
+        transform: none;
+        box-shadow: none;
+    }
 }
 
