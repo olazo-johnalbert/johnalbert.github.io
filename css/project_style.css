@@ -37,7 +37,7 @@
 }
 
 .slide {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     height: 90%;
     scroll-snap-align: center;
@@ -243,10 +243,9 @@
 .carousel-card-item {
     position: absolute;
     height: 90%;
-    width: 40%;
+    width: 35%;
     border-radius: 8px;
     left: 100%;
-    /* flex: 0 0 var(--item-width); */
     animation: scroll-left var(--scroll-duration) linear infinite;
     overflow: hidden;
 }
@@ -283,8 +282,8 @@
 
 .dots-indicator li {
     background-color: #a7a7a7;
-    width: 0.6vw;
-    height: 0.6vw;
+    width: 0.5vw;
+    height: 0.5vw;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s ease-in;

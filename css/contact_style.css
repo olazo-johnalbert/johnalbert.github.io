@@ -9,7 +9,7 @@
     display: grid;
     width: 100%;
     height: 78vh;
-    padding: 2vw 10vw;
+    padding: 2vw 8vw;
     grid-template-columns: 42% 52%;
     grid-template-rows: 
         40% 
@@ -134,7 +134,7 @@
 }
 
 .wave {
-    width: 100%;
+    width: 200%;
     height: 200%;
     background: #eeeeee;
     display: flex;
@@ -308,7 +308,7 @@
 }
 
 .contact-links {
-    height: 10%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

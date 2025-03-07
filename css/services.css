@@ -4,10 +4,10 @@
     display: grid;
     width: 100%;
     height: 85vh;
-    padding: 2vw 10vw;
+    padding: 2vw 8vw;
     grid-template-columns: 50% 23.5% 23.5%;
     grid-template-rows:
-        17% 40% 40%;
+        17% 39% 39%;
     grid-template-areas:
         "title title title"
         "description service1 service1"

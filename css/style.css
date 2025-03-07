@@ -24,7 +24,8 @@ body {
     gap: 20px;
     overflow: hidden;
     background-color: #dfdfdf;
-    padding: 20px;
+    scrollbar-gutter: stable both-edges;
+    padding: 1%;
 }
 
 ::-webkit-scrollbar {
@@ -61,12 +62,11 @@ header {
     position: sticky;
     top: 20px;
     width: 90vw;
-    height: 10%;
+    height: auto;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     gap: 20vw;
-    margin: 0;
     z-index: 1000;
 }
 
@@ -76,10 +76,9 @@ header h4 {
 }
 
 .nav-bar {
-    /* border: yellow 1px solid; */
     position: relative;
     width: 50vw;
-    max-width: 600px;
+    max-width: 50%;
     height: 3rem;
     box-shadow: 3px 3px 5px rgba(255,255,255, 0.8),
     -3px -3px 5px rgba(27, 27, 27, 0.32);
@@ -210,12 +209,12 @@ header h4 {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 90%;
+    min-height: 85vh;
     height: auto;
     max-height: unset;
     padding: 0;
+    /* margin: 0.5%; */
 }
-
 
 .card {
     box-shadow: var(--card-box-shadow);
@@ -273,7 +272,7 @@ header h4 {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 50vw;
+        gap: minmax(5px, 50vw);
     }
     header h4 {
         font-size: 1.5rem;
@@ -281,6 +280,9 @@ header h4 {
     .tile-container {
         grid-area: tile-container;
         max-height: unset;
+    }
+    .tile-container > * {
+        animation: none;
     }
 }
 
