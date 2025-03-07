@@ -46,13 +46,11 @@
 }
 
 .photocard-container h1 {
-
     margin-top: 0;
     font-size: calc(1rem + 1vw);
 }
 
 #welcome-photocard h2 {
-
     text-align: left;
     align-self: flex-start;
     width: 100%;
@@ -583,6 +581,10 @@
         flex-wrap: wrap;
         gap: 10px;
     }
+    .tech-section {
+        flex-direction: column;
+    }
+    
 
     .svg-icon {
         width: 2.5rem;
