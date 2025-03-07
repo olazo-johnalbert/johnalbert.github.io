@@ -60,19 +60,19 @@
 @keyframes water_wave {
     0% {
         transform: translate(-50%, -50%) rotate(0deg);
-        top: -20%;
+        top: -30%;
     }
     25% {
-        top: -40%
+        top: -40%;
     }
     50% {
-        top: -60%
+        top: -60%;
     }
     75% {
-        top: -40%
+        top: -40%;
     }
     100% {
         transform: translate(-50%, -50%) rotate(3600deg);
-        top: -20%
+        top: -30%;
     }
 }

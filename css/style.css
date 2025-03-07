@@ -29,7 +29,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 1vw;
+    width: 10px;
     margin: 1vw;
     background-color: transparent;
     border-radius: 10px;
@@ -64,9 +64,8 @@ header {
     width: 90vw;
     height: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    gap: 20vw;
     z-index: 1000;
 }
 
@@ -248,7 +247,7 @@ header h4 {
     display: none;
 }
 
-/* @media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) {
     body {
         font-family: "Space Grotesk", serif;
         min-height: auto;
@@ -259,20 +258,20 @@ header h4 {
         grid-template-areas: 
             "header"
             "tile-container";
-        gap: 40px;
         overflow: auto;
+        gap: 40px;
         scrollbar-gutter: stable both-edges;
+        padding: 0;
     }
     header {
+        border-bottom: 1px solid #030303;
         top: 0;
         position: sticky;
-        padding: 20px;
+        padding: 10px;
         width: 100%;
+        margin: 0;
         background-color: #dfdfdf;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: minmax(5px, 50vw);
+        /* gap: minmax(5px, 50vw); */
     }
     header h4 {
         font-size: 1.5rem;
@@ -288,5 +287,5 @@ header h4 {
         transform: none;
         box-shadow: none;
     }
-} */
+}
 

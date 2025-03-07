@@ -42,8 +42,8 @@
     </header>
     <div class="tile-container">
         <div id="slideContainer" class="slide-container">
-            <section class="slide section">
-                <div class="container" id="project1">
+            <section class="slide section"  id="project1">
+                <div class="container">
                     <div class="card" id="logo-card">
                         <img src="../img/Spotter/Spotter.png">
                     </div>
@@ -76,8 +76,8 @@
                     </div>
                 </div>
             </section>
-            <section class="slide section">
-                <div class="container" id="project2">
+            <section class="slide section"  id="project2">
+                <div class="container">
                     <div class="card" id="logo-card">
                         <img src="../img/LexiGuess/LexiGuess.png">
                     </div>
@@ -156,23 +156,6 @@
             </ol>
         </div>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll(".section");
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    } else {
-                        entry.target.classList.remove("active");
-                    }
-                });
-            }, { threshold: 0.8 });
-
-            sections.forEach(section => observer.observe(section));
-        });
-    </script>
 </body>
 
 </html>
