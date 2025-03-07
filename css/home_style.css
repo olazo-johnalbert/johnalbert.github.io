@@ -11,12 +11,12 @@
 
 .container {
     width: 85vw;
-    height: 78vh;
+    min-height: 78vh;
     display: grid;
     padding: 0;
     margin: 0;
     grid-template-columns: 27% 26% 15% 27%;
-    grid-template-rows: 45% 35% 12%;
+    grid-template-rows: 47% 35% 12%;
     grid-template-areas:
         "welcome education wave projects"
         "welcome tech tech projects"

@@ -278,6 +278,7 @@ header h4 {
         font-size: 1.5rem;
     }
     .tile-container {
+        border: 1px red solid;
         grid-area: tile-container;
         max-height: unset;
     }
