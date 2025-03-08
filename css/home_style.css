@@ -2,6 +2,8 @@
     --backround-color: #fff;
     --card-box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8),
         3px 3px 5px rgba(70, 70, 70, 0.32);
+    --rev-card-box-shadow:1px 1px 3px rgba(255, 255, 255, 0.8),
+        -1px -1px 3px rgba(70, 70, 70, 0.32);
     --blur-value: 10px;
 }
 
@@ -13,8 +15,8 @@
     display: grid;
     padding: 0;
     margin: 0;
-    grid-template-columns: 27% 26% 15% 27%;
-    grid-template-rows: 39% 43% 12%;
+    grid-template-columns: 27% 29% 12% 27%;
+    grid-template-rows: 39% 47% 10%;
     grid-template-areas:
         "welcome education wave projects"
         "welcome tech tech projects"
@@ -41,7 +43,6 @@
     align-items: center;
     flex-direction: column;
     margin: 0;
-
     padding: 2vw;
 }
 
@@ -68,7 +69,7 @@
     /* height: clamp(80%, 10vh, 100%);
     width: clamp(80%, 5vw, 100%); */
     /* border: 1px solid #030303; */
-    box-shadow: var(--card-box-shadow);
+    box-shadow: var(--rev-card-box-shadow);
     border-radius: 20px;
     width: 75%;
     position: relative;
@@ -100,7 +101,7 @@
     animation: slide-right-in 0.3s ease;
     animation-delay: 0.2s;
     animation-fill-mode: backwards;
-    padding: 1vw;
+    padding: 5% 3%;
     height: 100%;
 }
 
@@ -110,19 +111,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-self: center;
+    transform: scale(0.95);
+    padding: 3%;
+    border-radius: 4px;
+    box-shadow: var(--rev-card-box-shadow);
     /* margin: 0.5vw 1vw; */
 }
 
 .education-info h5 {
     margin: 0.1vw 0;
-    font-size: 0.5rem;
+    font-size: clamp(0.5rem, 0.5rem + 0.1vw, 1rem);
     font-weight: 500;
     text-align: left;
 }
 
 .education-info p {
     margin: 1px;
-    font-size: 0.5rem;
+    font-size: clamp(0.5rem, 0.5rem + 0.1vw, 1rem);
     font-weight: 300;
     opacity: 0.6;
 }
@@ -135,14 +141,14 @@
 .education-title h4 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size: calc(0.8rem + 0.1vw);
-    margin: 1px;
+    font-size: clamp(0.5rem, 0.5rem + 0.1vw, 1rem);
+    margin: 0;
     margin-right: 2em;
 }
 
 .education-title h6 {
     font-weight: 300;
-    font-size: 0.1rem;
+    font-size: clamp(0.5rem, 0.5rem + 0.1vw, 1rem);
 }
 
 /* <------------------------------------------------------------------------> */
@@ -216,7 +222,7 @@
     animation-delay: 0.4s;
     animation-fill-mode: backwards;
     height: 100%;
-    padding: 1.5vw;
+    padding: 1vw;
     gap: 0;
 }
 
@@ -227,8 +233,10 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
+    margin: 0.2vw;
+    padding: 0 1vw;
+    border-radius: 10px;
+    box-shadow: var(--rev-card-box-shadow);
 }
 
 #experience-card h3 {
@@ -237,14 +245,13 @@
     align-items: center;
     font-size: (0.5rem, 0.5rem + 1.317vw, 1rem);
     font-weight: 700;
-    width: 10rem;
+    width: calc(5rem + 5vw);
     height: 100%;
-    text-wrap: wrap;
 }
 
 #experience-card ul {
     height: 100%;
-    width: 70%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,13 +259,11 @@
     padding: 0.3vw;
     flex-wrap: wrap;
     gap: 0.5vw;
-    border-bottom: 1px solid #0d0403;
-    border-radius: 10px;
 }
 
 .svg-icon {
-    width: 2rem;
-    height: 2rem;
+    width: calc(1rem + 1vw);
+    height: calc(1rem + 1vw);
 }
 
 /* <------------------------------------------------------------------------> */
@@ -402,6 +407,271 @@
 
 @media only screen and (max-width: 1080px) {
     .container {
+        width: 90%;
+        max-height: 100%;
+        display: grid;
+        padding: 0;
+        place-content: center;
+        grid-template-columns: 45% 45%;
+        grid-template-rows: 
+            43%
+            10%
+            10%
+            20%
+            10%;
+        grid-template-areas:
+            "welcome tech"
+            "education tech"
+            "education projects"
+            "wave projects"
+            "quote projects";
+        grid-gap: 2vw;
+    }
+
+    #welcome-photocard {
+        justify-self: center;
+        grid-area: welcome;
+        animation: slide-bottom-in 0.3s ease;
+        animation-fill-mode: backwards;
+    }
+
+    .photocard-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 2vw;
+    }
+
+    .photocard-container h1 {
+        margin: 10px;
+        font-size: calc(1.5rem + 1vw);
+    }
+
+    #welcome-photocard h2 {
+        text-align: left;
+        align-self: flex-start;
+        font-size: calc(0.9rem + 1vw);
+    }
+
+    #welcome-photocard p {
+        font-size: calc(0.5rem + 1vw);
+        /* text-align: justify; */
+        font-weight: 300;
+        text-wrap: wrap;
+        padding: 0;
+        margin: 0;
+    }
+
+    .photo-container {
+        height: calc(50px + 20vw);
+        width: calc(50px + 20vw);
+        position: relative;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .photo-container img {
+        top: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* ---------------------------------------------------------------------- */
+    #education-card {
+        grid-area: education;
+        animation: slide-right-in 0.3s ease;
+        animation-delay: 0.2s;
+        animation-fill-mode: backwards;
+        /* padding: 30px 20px; */
+    }
+
+    .education-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 1vw;
+        margin: 0.5vw;
+    }
+
+    .education-title {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .education-title h4 {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: calc(0.5rem + 1vw);
+        margin: 1px;
+        margin-right: 1rem;
+    }
+
+    .education-title #year {
+        font-weight: 300;
+    }
+
+    .education-info h5 {
+        margin: 2px 0px 2px 0px;
+        font-size: calc(0.5rem + 1vw);
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .education-info p {
+        margin: 1px;
+        font-size: calc(0.5rem + 1vw);
+        font-weight: 300;
+        opacity: 0.6;
+    }
+
+    /* ---------------------------------------------------------------------- */
+    #rand-img-card {
+        height: 100%;
+        grid-area: wave;
+        /* display: none; */
+        align-items: left;
+        justify-content: left;
+        box-sizing: border-box;
+        animation: slide-top-in 0.3s ease;
+        animation-delay: 0.6s;
+        animation-fill-mode: backwards;
+        padding: 0;
+        background-color: #0d0403;
+    }
+
+    @keyframes water_wave {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+            top: -25vw;
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(3600deg);
+            top: -25vw;
+        }
+    }
+    /* ---------------------------------------------------------------------- */
+    #experience-card {
+        grid-area: tech;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1vw;
+        animation: slide-bottom-in 0.3s ease;
+        animation-delay: 0.4s;
+        animation-fill-mode: backwards;
+        padding: 1vw;
+    }
+
+    #experience-card h3 {
+        width: fit-content;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        text-wrap: wrap;
+        border-bottom: 2px #030303 solid;
+    }
+
+    #experience-card ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .tech-section {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .svg-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    /* ---------------------------------------------------------------------- */
+    #projects-card {
+        grid-area: projects;
+        animation: slide-right-in 0.3s ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: backwards;
+        height: 100%;
+        gap: 1vh;
+        padding: 3vw;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 3px;
+        height: auto;
+        width: 100%;
+    }
+
+    #projects-card h1 {
+        font-size: calc(1rem, 1rem + 2vw, 2rem);
+    }
+
+    .project {
+        position: relative;
+        height: 130px;
+        filter: brightness(100%);
+    }
+
+    .project:hover {
+        transform: none;
+        filter: none;
+    }
+
+    .project::before {
+        transition: opacity 0.3s ease;
+        opacity: 1;
+    }
+
+    .project:hover::before {
+        opacity: 1;
+    }
+
+    .project::before:active {
+        opacity: 0;
+    }
+
+    .project h4 {
+        font-size: 0.5rem;
+        top: 75%;
+        margin: 0;
+        padding: 0 2rem;
+        opacity: 0;
+        color: #ffa641;
+        align-self: flex-start;
+        background: none;
+        background-clip: initial;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        animation: none;
+    }
+
+    .project:hover h4 {
+        opacity: 1;
+    }
+
+    /* ---------------------------------------------------------------------- */
+    #quote-card h1 {
+        font-size: 1.1rem;
+        padding: 5vw;
+    }
+}
+@media only screen and (max-width: 765px) {
+    .container {
         width: 85%;
         max-height: 100%;
         display: grid;
@@ -431,22 +701,22 @@
         align-items: center;
         flex-direction: column;
         margin: 0;
-        padding: calc(10px + 2vw);
+        padding: 8vw;
     }
 
     .photocard-container h1 {
         margin: 10px;
-        font-size: calc(2rem + 2vw);
+        font-size: calc(1.5rem + 2vw);
     }
 
     #welcome-photocard h2 {
         text-align: left;
         align-self: flex-start;
-        font-size: clamp(1.5rem, 1rem + 3vw, 2rem)
+        font-size: calc(0.9rem + 2vw);
     }
 
     #welcome-photocard p {
-        font-size: clamp(1rem, 1rem + 0.5vw, 2rem);
+        font-size: calc(0.5rem + 2vw);
         /* text-align: justify; */
         font-weight: 300;
         text-wrap: wrap;
@@ -489,8 +759,8 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 0;
-        margin: 10px 4vw;
+        padding: 2vw;
+        margin: 2vw;
     }
 
     .education-title {
@@ -659,5 +929,6 @@
     /* ---------------------------------------------------------------------- */
     #quote-card h1 {
         font-size: 0.5rem;
+        padding: 5vw;
     }
 }

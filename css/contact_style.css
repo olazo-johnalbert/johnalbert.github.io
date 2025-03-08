@@ -1,4 +1,3 @@
-@import url(keyframes.css);
 
 .tile-container {
     justify-content: start;
@@ -339,4 +338,29 @@
 
 .contact-links a:hover {
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 765px) {
+    .container {
+        /* border: 1px solid red; */
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10rem 5rem 5rem 5rem 20rem;
+        grid-template-areas: 
+            "contact-card"
+            "name-card"
+            "email-card"
+            "subject-card"
+            "message-card";
+        gap: 3vw;
+    }
+
+    #contact-card h1 {
+        font-size: calc(2rem + 1vw);
+    }
+
+    .wave::before,
+    .wave::after {
+        top: -250vh;
+    }
 }

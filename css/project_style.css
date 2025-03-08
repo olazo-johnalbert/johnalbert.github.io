@@ -7,6 +7,8 @@
     --background-color: #fff;
     --card-box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.8),
         3px 3px 5px rgba(70, 70, 70, 0.32);
+    --rev-card-box-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8),
+        -2px -2px 3px rgba(70, 70, 70, 0.32);
     --blur-value: 10px;
     --scroll-duration: 10s;
 }
@@ -26,7 +28,7 @@
     scroll-behavior: smooth;
     overscroll-behavior-x: contain;
     width: 100vw;
-    height: 85vh;
+    height: 90vh;
     flex-direction: column;
     /* scroll-padding-left: 10vw;  */
     /* margin: 0; */
@@ -170,7 +172,9 @@
     align-items: center;
     flex-direction: column;
     height: 100%;
-    padding: 0;
+    padding: 1vw;
+    border-radius: 8px;
+    box-shadow: var(--rev-card-box-shadow);
 }
 
 .info-container ul {
@@ -290,4 +294,11 @@
     width: 1.5vw;
     border-radius: 20px;
     background-color: #000000;
+}
+
+@media only screen and (max-width: 1080px) {
+    .slide-container {
+        border: 1px red solid;
+        height: 80vh;
+    }
 }

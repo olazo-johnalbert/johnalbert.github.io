@@ -283,9 +283,55 @@ header h4 {
     .tile-container > * {
         animation: none;
     }
-    .tile-container > *:hover {
-        transform: none;
-        box-shadow: none;
+
+@media only screen and (max-width: 765px) {
+        body {
+            font-family: "Space Grotesk", serif;
+            min-height: auto;
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "header"
+                "tile-container";
+            overflow: auto;
+            gap: 40px;
+            scrollbar-gutter: stable both-edges;
+            padding: 0;
+        }
+        header {
+            border-bottom: 1px solid #030303;
+            top: 0;
+            position: sticky;
+            padding: 10px;
+            width: 100%;
+            margin: 0;
+            background-color: #dfdfdf;
+            /* gap: minmax(5px, 50vw); */
+        }
+        header h4 {
+            font-size: 1.5rem;
+        }
+        .tile-container {
+            grid-area: tile-container;
+            max-height: unset;
+        }
+        .tile-container > * {
+            animation: none;
+        }
+        .tile-container > *:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        .card {
+            animation: none;
+        }
+        .card:hover {
+            transform: translateY(0%);
+            box-shadow: var(--card-box-shadow);
+            z-index: 0;
+        }
     }
 }
 

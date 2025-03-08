@@ -6,8 +6,7 @@
     height: 85vh;
     padding: 2vw 8vw;
     grid-template-columns: 50% 23.5% 23.5%;
-    grid-template-rows:
-        17% 39% 39%;
+    grid-template-rows: 17% 39% 39%;
     grid-template-areas:
         "title title title"
         "description service1 service2"
@@ -44,7 +43,6 @@
     width: 50%;
 }
 
-
 #description {
     /* overflow-y: auto; */
     grid-area: description;
@@ -70,8 +68,12 @@
 
 #description strong {
     text-transform: uppercase;
-    background: linear-gradient(to right, #f8d041,
-            #ff8441, #ef8720, #ff8441, #f8d041);
+    background: linear-gradient(to right,
+            #f8d041,
+            #ff8441,
+            #ef8720,
+            #ff8441,
+            #f8d041);
     background-size: 200%;
     background-clip: text;
     -webkit-background-clip: text;
@@ -83,8 +85,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 10% 85%;
-    grid-template-areas:
-        "icon detail";
+    grid-template-areas: "icon detail";
     gap: calc(16px + 1vw);
     margin: 0;
 }
@@ -109,6 +110,10 @@
     grid-area: icon;
     width: 2rem;
     height: 2rem;
+}
+
+.service {
+    height: 100%;
 }
 
 #service1 {
@@ -139,7 +144,6 @@
     animation: slide-bottom-in 0.3s ease 1.2s backwards;
 }
 
-
 .info-container {
     height: 100%;
     display: flex;
@@ -159,12 +163,11 @@
 }
 
 .info-text-container {
-    /* border: blue 1px solid; */
     padding: 1.1%;
     margin: 0;
 }
 
-.info-text-container strong{
+.info-text-container strong {
     font-size: calc(0.5rem + 0.5vw);
 }
 
@@ -173,4 +176,63 @@
     font-weight: 300;
     font-size: 0.5rem;
     margin: 0.5vw 0;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 8% 42% 21% 21%;
+        grid-template-areas:
+            "title title"
+            "description description"
+            "service1 service2"
+            "service3 service4";
+        gap: 2vw;
+    }
+    #titleCard h1{
+        font-size: calc(1rem + 1vw);
+    }
+
+    .info-container p {
+        font-family: "Open Sans", serif;
+        font-weight: 300;
+        font-size: 0.5rem;
+        margin: 0.5vw 0;
+    }
+}
+
+@media only screen and (max-width: 765px) {
+    .container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6% 38% repeat(4, 13%);
+        grid-template-areas:
+            "title"
+            "description"
+            "service1" 
+            "service2"
+            "service3" 
+            "service4";
+        gap: 3vw;
+        padding: 5vw;
+    }
+    #titleCard h1{
+        font-size: calc(1rem + 1vw);
+    }
+
+    #description li p {
+        font-weight: 300;
+        font-size: 0.5rem;
+        margin: 0;
+    }
+
+    .info-container p {
+        font-family: "Open Sans", serif;
+        font-weight: 300;
+        font-size: 0.5rem;
+        margin: 0.5vw 0;
+    }
 }
