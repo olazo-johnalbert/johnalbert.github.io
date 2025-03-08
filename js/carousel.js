@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const slider = document.querySelector(".slide-container");
     const slides = document.querySelectorAll(".slide");
     const dots = document.querySelectorAll(".dots-indicator li");
+    const prevButton = document.getElementById("prev");
+    const nextButton = document.getElementById("next");
     let activeIndex = 0;
 
     const showSlide = (index) => {
@@ -15,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const handleScroll = (event) => {
+        if (window.matchMedia("(max-width: 765px)").matches) return; 
         event.preventDefault();
         updateActiveSlide(event.deltaY > 0 ? 1 : -1);
     };
@@ -40,27 +43,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to navigate to a specific slide or section from a hash link
     const navigateToHash = () => {
-        const hash = window.location.hash.substring(1); 
+        const hash = window.location.hash.substring(1);
         if (!hash) return;
-
-
-        const targetSlide = Array.from(slides).find(slide => slide.id === hash);
+    
+        // Wait until elements are available
+        const targetSlide = document.getElementById(hash);
         const targetSection = document.getElementById(hash);
-
+    
+        if (!targetSlide && !targetSection) {
+            console.warn(`Element with ID '${hash}' not found!`);
+            return;
+        }
+    
         if (targetSlide) {
             activeIndex = Array.from(slides).indexOf(targetSlide);
-
             showSlide(activeIndex);
         } else if (targetSection) {
             targetSection.scrollIntoView({ behavior: "smooth" });
-
+            console.log(targetSection);
         }
     };
+    
 
     // Initialize
     showSlide(activeIndex);
     slider.addEventListener("wheel", handleScroll);
     dots.forEach((dot, index) => dot.addEventListener("click", (event) => handleDotClick(event, index)));
+    prevButton.addEventListener("click", () => updateActiveSlide(-1));
+    nextButton.addEventListener("click", () => updateActiveSlide(1));
     observeSlides();
 
     // Section Observer
@@ -74,7 +84,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     observeSections();
-    navigateToHash(); // Check for hash navigation on page load
+    navigateToHash();
+
+    
 
     // Handle hash changes dynamically
     window.addEventListener("hashchange", navigateToHash);

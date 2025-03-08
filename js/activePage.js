@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!link || !activeIndicator || !navBar) return; // Prevent errors
 
         const linkRect = link.getBoundingClientRect();
-        console.log(linkRect);
         const navRect = navBar.getBoundingClientRect();
 
         activeIndicator.style.left = `${linkRect.left - navRect.left}px`;

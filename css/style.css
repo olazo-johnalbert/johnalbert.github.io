@@ -247,6 +247,12 @@ header h4 {
     display: none;
 }
 
+@media only screen and (max-height: 745px) {
+    body {
+        overflow: auto;
+    }
+}
+ 
 @media only screen and (max-width: 1080px) {
     body {
         font-family: "Space Grotesk", serif;

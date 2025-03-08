@@ -73,7 +73,7 @@
     z-index: 1;
     padding: 0;
     margin-top: 1%;
-    background-color: #d9d9d9ff;
+    background-color: #dfdfdf;
     transition: 0.3s;
     text-transform: uppercase;
 
@@ -357,6 +357,9 @@
 
     #contact-card h1 {
         font-size: calc(2rem + 1vw);
+    }
+    .contact-links{
+        margin: 3vw;
     }
 
     .wave::before,

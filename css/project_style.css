@@ -15,23 +15,55 @@
 
 /* -------------------------------------------------------------------------- */
 
-
 .slide-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    /* gap: 10vw; */
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: hidden;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     overscroll-behavior-x: contain;
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     flex-direction: column;
-    /* scroll-padding-left: 10vw;  */
-    /* margin: 0; */
+}
+
+.slide-btn {
+    width: 2.5vw;
+    height: 2.5vw;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    background: #dfdfdf;
+    border: none;
+    border-radius: 8px;
+    box-shadow: var(--card-box-shadow);
+    transition: 0.3s ease
+}
+
+#next {
+    left: 95%;
+    background: url("../icons/next.svg") no-repeat center;
+    background-size: contain;
+    background-size: 50%;
+}
+
+#prev {
+    right: 95%;
+    background: url("../icons/prev.svg") no-repeat center;
+    background-size: contain;
+    background-size: 50%;
+}
+
+.slide-btn:hover,
+.slide-btn:active {
+    transform: translateY(-0.3vw);
+    cursor: pointer;
+    box-shadow: -1px -1px 0px white,
+        6px 6px 6px rgba(0, 0, 0, 0.3);
+    ;
 }
 
 .slide {
@@ -47,8 +79,7 @@
 }
 
 .container {
-    /* border: 1px green solid; */
-    width: 70vw;
+    width: 90%;
     height: 100%;
     display: grid;
     margin: 0;
@@ -268,7 +299,7 @@
     animation-delay: calc(var(--scroll-duration) / 3 * (3 - 3) * -1);
 }
 
-.dots-indicator{
+.dots-indicator {
     height: 100%;
     width: 100%;
     list-style: none;
@@ -298,7 +329,64 @@
 
 @media only screen and (max-width: 1080px) {
     .slide-container {
-        border: 1px red solid;
         height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 765px), (max-height: 745px) {
+    .slide-container {
+        height: 150vh;
+    }
+    .slide {
+        padding: 0;
+        opacity: 1;
+    }
+    .slide-btn {
+        top: initial;
+        border-radius: 3px;
+        width: 4vw;
+        height: 4vw;
+        position: initial;
+        margin: 2vw;
+    }
+    #prev {
+        right: initial;
+    }
+    #next {
+        left: initial;
+    }
+    .container {
+        height: 100%;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 12% 50% 15%;
+        grid-template-areas:
+            "logo"
+            "title"
+            "info"
+            "carousel";
+    }
+
+    /* .info-container {
+        padding: 1%;
+    } */
+    .info-container ul {
+        font-weight: 300;
+        font-size: calc(0.5rem + 1vw);
+    }
+    .carousel-card-item {
+        width: clamp(100px,50vw, 180px);
+    }
+
+    .dots-indicator {
+        gap: 1.5vw;
+    }
+
+    .dots-indicator li {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    
+    .dots-indicator li.active {
+        width: 4.5vw;
     }
 }
