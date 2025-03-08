@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const handleScroll = (event) => {
-        if (window.matchMedia("(max-width: 765px)").matches) return; 
+        if (window.matchMedia("(max-width: 765)").matches || window.matchMedia("(max-height: 600)")) return; 
         event.preventDefault();
         updateActiveSlide(event.deltaY > 0 ? 1 : -1);
     };
